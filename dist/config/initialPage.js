@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.initialPage = void 0;
+const initialPage = `
+    <body style="margin: 0; padding: 0; box-sizing: border-box">
+      <div style="width: 100vw; height: 100vh; background-color: #3a3a3a; display: flex; align-items: center; justify-content: center">
+        <h1 style="color: white"> API-errands 🚀</h1>
+      </div>
+    </body>
+  `;
+exports.initialPage = initialPage;
