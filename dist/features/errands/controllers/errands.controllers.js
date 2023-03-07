@@ -32,37 +32,43 @@ class ErrandController {
             return res.status(400).json(response);
         }
     }
-    getErrands(req, res) {
-        try {
-            const listOfUsers = (0, users_1.getUsers)();
-            const { id } = req.params;
-            const { description, filed } = req.query;
-            const user = listOfUsers.find((user) => user.id === id);
-            const errands = user.errands.filter((errand) => {
-                if (description && filed) {
-                    return (errand._description
-                        .toLowerCase()
-                        .includes(description.toLowerCase()) &&
-                        errand._filed === Boolean(filed === 'true' ? true : false));
-                }
-                return errand;
-            });
-            const response = {
-                success: true,
-                message: `Errands from ${user.name} searched with success`,
-                data: errands.map((errand) => errand.handleProperties())
-            };
-            return res.status(200).json(response);
-        }
-        catch (error) {
-            const response = {
-                success: false,
-                message: `The searched failed.`,
-                data: null,
-            };
-            return res.status(400).json(response);
-        }
-    }
+    /* getErrands(req: Request, res: Response) {
+      try {
+        const listOfUsers = getUsers();
+        const { id } = req.params;
+        const { description, filed } = req.query;
+  
+        const user = listOfUsers.find((user) => user.id === id) as User;
+  
+        const errands = user.errands.filter((errand) => {
+          if (description && filed) {
+            return (
+              errand._description
+                .toLowerCase()
+                .includes((description as string).toLowerCase()) &&
+              errand._filed === Boolean(filed === 'true' ? true : false)
+            );
+          }
+          return errand
+        });
+  
+        const response: ResponseAPI = {
+          success: true,
+          message: `Errands from ${user.name} searched with success`,
+          data: errands.map((errand) => errand.handleProperties())
+        };
+  
+        return res.status(200).json(response);
+  
+      } catch (error) {
+        const response: ResponseAPI = {
+          success: false,
+          message: `The searched failed.`,
+          data: null,
+        };
+        return res.status(400).json(response);
+      }
+    } */
     getErrandById(req, res) {
         try {
             const listOfUsers = (0, users_1.getUsers)();

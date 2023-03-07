@@ -16,6 +16,6 @@ const port = process.env.PORT;
 
 routesApp(app);
 
-app.listen(port, () => console.log('The API é running.'));
+app.listen(port, () => console.log('The API is running.'));
 
 //console.log(Boolean(false))
