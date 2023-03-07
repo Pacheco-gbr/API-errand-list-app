@@ -1,5 +1,6 @@
 import express from "express";
 import { routesApp } from "./config/routes";
+import 'dotenv/config';
 import cors from "cors";
 
 const allowedOrigins = ["*"];
@@ -15,6 +16,6 @@ const port = process.env.PORT;
 
 routesApp(app);
 
-app.listen(port, () => console.log("The API is running!"));
+app.listen(port, () => console.log('The API é running.'));
 
 //console.log(Boolean(false))
