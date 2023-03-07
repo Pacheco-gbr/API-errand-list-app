@@ -16,5 +16,5 @@ app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 const port = process.env.PORT;
 (0, routes_1.routesApp)(app);
-app.listen(8080, () => console.log('The API is running.'));
+app.listen(port, () => console.log("The API is running."));
 //console.log(Boolean(false))

@@ -7,7 +7,7 @@ exports.saveUsers = exports.getUsers = exports.listOfUsers = void 0;
 const models_1 = require("../models");
 const fs_1 = __importDefault(require("fs"));
 exports.listOfUsers = [];
-const directory = `${__dirname}\\db.json`;
+const directory = `db.json`;
 function getUsers() {
     const list = fs_1.default.readFileSync(directory);
     const listJSON = JSON.parse(list.toString());

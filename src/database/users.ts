@@ -3,7 +3,7 @@ import fs from "fs";
 
 export const listOfUsers: Array<User> = [];
 
-const directory = `${__dirname}\\db.json`;
+const directory = `db.json`;
 
 export function getUsers(): Array<User> {
   const list = fs.readFileSync(directory);
