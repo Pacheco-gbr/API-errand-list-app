@@ -37,7 +37,7 @@ class ErrandController {
       return res.status(400).json(response);
     }
   }
-  getErrands(req: Request, res: Response) {
+  /* getErrands(req: Request, res: Response) {
     try {
       const listOfUsers = getUsers();
       const { id } = req.params;
@@ -73,7 +73,7 @@ class ErrandController {
       };
       return res.status(400).json(response);
     }
-  }
+  } */
   getErrandById(req: Request, res: Response) {
     try {
       const listOfUsers = getUsers();

@@ -11,11 +11,11 @@ const errandRoutes = (router: Router) => {
     createErrandValidator,
     new ErrandController().createErrand
   );
-  router.get(
+  /*  router.get(
     "/users/:id/errands",
     userIDValidator,
     new ErrandController().getErrands
-  );
+  );*/
   router.get(
     "/users/:id/errands/:idErrand",
     existErrandValidator,
@@ -28,10 +28,9 @@ const errandRoutes = (router: Router) => {
   );
   router.delete(
     "/users/:id/errands/:idErrand",
-    /*existErrandValidator,*/
+    existErrandValidator,
     new ErrandController().deleteErrand
   );
 };
-
 
 export { errandRoutes };
