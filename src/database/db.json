@@ -1,1 +1,9 @@
-[{"id":"7b43227d-8619-4fb0-a4c2-95f3d30d30ad","name":"Mariana","email":"mariana@hotmail.com","password":"senha123","errands":[{"id":"8bb29d04-d2c0-4cc2-ba79-67e590cc1da7","description":"Gym","detail":"You have to go to the gym everyday.","filed":false}]},{"id":"c6257b4f-fe33-4860-8dc3-474c442a421f","name":"Gabriel","email":"gabriel@hotmail.com","password":"senha123","errands":[]}]
+[
+  {
+    "id": "a7fcd8f1-3ae0-4b38-b8c0-7843314d3807",
+    "name": "gabriel",
+    "email": "gabriel@hotmail.com",
+    "password": "senha123",
+    "errands": []
+  }
+]

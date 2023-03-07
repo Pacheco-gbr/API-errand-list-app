@@ -1,6 +1,5 @@
 import express from "express";
 import { routesApp } from "./config/routes";
-import { ErrandController } from "./features/errands/controllers/errands.controllers";
 import cors from "cors";
 
 const allowedOrigins = ["*"];
@@ -10,11 +9,12 @@ const options: cors.CorsOptions = {
 };
 
 const app = express();
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
+const port = process.env.PORT;
 
 routesApp(app);
 
-app.listen(3000, () => console.log("The API is running!"));
+app.listen(port, () => console.log("The API is running!"));
 
 //console.log(Boolean(false))
